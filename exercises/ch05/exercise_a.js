@@ -11,7 +11,13 @@
 
 
 // isLastInStock :: [Car] -> Boolean
-const isLastInStock = (cars) => {
-  const lastCar = last(cars);
-  return prop('in_stock', lastCar);
-};
+// const isLastInStock = (cars) => {
+//   const lastCar = last(cars);
+//   return prop('in_stock', lastCar);
+// };
+
+// const isInStock = prop('in_stock')
+// const isLastInStock = compose(isInStock, last)
+
+// one liner
+const isLastInStock = compose(prop('in_stock'), last)
